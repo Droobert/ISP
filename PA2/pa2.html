@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src = "pa2script.js"></script>
+<link rel="stylesheet" type="text/css" href="pa2style.css">
+</head>
+<body onload="startTime()">
+
+<p id="clock"></p>
+<p id="date"></p>
+
+<h2>JavaScript in Body</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<p>This is Andrew Doyle's webpage. <br>
+It was completed at XX:XX on XX/XX/XXXX.
+</p>
+
+<script>
+var d = new Date();
+document.getElementById("date").innerHTML = (d.getMonth()+1) + '/' + (d.getDay()+1) + '/' + (d.getFullYear());
+</script>
+
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+
+
+</body>
+</html> 
+<!--
+TASK NOTES
+-your name: DONE
+-the time and date it is finished: FIXME
+-the current time and date: DONE
+
+(C) Your page should demonstrate the following features:
+
+1) A factorial calculator. 
+-The calculator will “prompt” the user for a positive number and “alert” the user if the number entered by the user is negative. 
+-The default input value for the prompt is 8. 
+-The computation should be done with a function. 
+-The result should be displayed with different size and color of font based on its value.
+-Use 10n to set the range, as “n” increases, font sizes increases.
+
+2) An email address validator. 
+-The validator has a text field allowing the user to enter an email address. 
+-It validates the address when the user clicks on a “Validate” button and alerts the user by draw a line through the wrong characters. 
+-The validator has another text field allowing the user to enter an email address. It validates the address as the user types and alerts the user whenever an invalid character is entered.
+
+3) An interactive animation. 
+-Add a small image (your thumbnail photo would be perfect) at the top-center of your page.
+-When the user clicks on any part of your page, the image will be moved to the new cursor location and centered there.
+-The “move” has to be animated, i.e., the image moves “smoothly” to the new location, it does not just jumps there.
+-->

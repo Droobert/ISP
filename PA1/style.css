@@ -1,0 +1,55 @@
+body{
+	background-color: orange;
+	text-align: center;
+	font-family: 'Droid Serif', serif;
+}
+
+ol{
+	list-style-position: inside;
+}
+
+ul{
+	list-style-position: inside;
+	list-style-type: circle;
+}
+
+@keyframes madness {
+	from {color: green; text-decoration: overline;}
+	to {color: red; text-decoration: underline;}
+}
+
+th{
+	background-color: green;
+	color: white;
+}
+
+tr:hover {background-color: #ffb648;}
+
+input:hover {background-color: #669999;}
+
+#importantline {
+	text-decoration: underline;
+}
+
+/*
+Your page should contain three levels of CSS styles: 
+ inline, (s)
+ document (s)
+ and external. (s) 
+
+The following selectors and styles should be at least one of the levels: 
+ simple, (what is the simple selector or style?)
+ class, (s)
+ generic, (s)
+ id, (s)
+ pseudo class, (s)
+ font (family, size, variant, style, weight),  fonts with different size and styles, The <font> tag is not supported in HTML5. Use CSS instead. (s)
+ text (decoration, alignment), (s)
+ list (bullets, image, sequence), (s)
+ color (named, hex, background), (s)
+ padding, (s)
+ margin, (s)
+ span, (s)
+ div, (s)
+ animation (s)
+ */

@@ -1,0 +1,20 @@
+body{
+	background-color: orange;
+	text-align: center;
+	font-family: 'Droid Serif', serif;
+}
+
+#clock {
+	font-size: 36pt;
+	text-align: right;
+	margin: 0;
+}
+#date {
+	font-size: 26pt;
+	text-align: right;
+	margin: 0;
+}
+
+/*
+TASK NOTES
+ */
