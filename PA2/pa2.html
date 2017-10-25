@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src = "pa2script.js"></script>
 <link rel="stylesheet" type="text/css" href="pa2style.css">
+<script src = "pa2script.js" defer></script>
 </head>
 <body onload="startTime()">
+<div id="contentContainer">
+	<div id="helloKitty"></div>
+	<p id="clock"></p>
+	<p id="date"></p>
 
-<p id="clock"></p>
-<p id="date"></p>
+	<h2>JavaScript in Body</h2>
 
-<h2>JavaScript in Body</h2>
+	<p id="demo">A Paragraph.</p>
 
-<p id="demo">A Paragraph.</p>
+	<p>This is Andrew Doyle's webpage. <br>
+	It was completed at XX:XX on XX/XX/XXXX.
+	</p>
 
-<p>This is Andrew Doyle's webpage. <br>
-It was completed at XX:XX on XX/XX/XXXX.
-</p>
+	<script>
+		var d = new Date();
+		document.getElementById("date").innerHTML = (d.getMonth()+1) + '/' + (d.getDay()+1) + '/' + (d.getFullYear());
+	</script>
 
-<script>
-var d = new Date();
-document.getElementById("date").innerHTML = (d.getMonth()+1) + '/' + (d.getDay()+1) + '/' + (d.getFullYear());
-</script>
+	
+	<button type="button" onclick="myFunction()">Try it</button>
 
-
-<button type="button" onclick="myFunction()">Try it</button>
-
-
-
+</div>
 </body>
 </html> 
 <!--
@@ -50,7 +50,7 @@ TASK NOTES
 -The validator has another text field allowing the user to enter an email address. It validates the address as the user types and alerts the user whenever an invalid character is entered.
 
 3) An interactive animation. 
--Add a small image (your thumbnail photo would be perfect) at the top-center of your page.
--When the user clicks on any part of your page, the image will be moved to the new cursor location and centered there.
--The “move” has to be animated, i.e., the image moves “smoothly” to the new location, it does not just jumps there.
+-Add a small image (your thumbnail photo would be perfect) at the top-center of your page. DONE
+-When the user clicks on any part of your page, the image will be moved to the new cursor location and centered there. DONE
+-The “move” has to be animated, i.e., the image moves “smoothly” to the new location, it does not just jumps there. FIXME - doesn't work for the first click
 -->
