@@ -14,6 +14,7 @@ body{
 	position: relative;
 	content:url(http://wikiclipart.com/wp-content/uploads/2016/11/Hello-kitty-clip-art-4.png);
 	left: 46.25%;
+	top: 1%;
 	width: 7.5%;
 	transition: left .5s ease-in-out, 
 		top .5s ease-in-out;
