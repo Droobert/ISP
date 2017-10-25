@@ -1,7 +1,3 @@
-function myFunction(){
-	document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-
 function startTime() {
     var today = new Date();
     var h = today.getHours();

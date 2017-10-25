@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="pa2style.css">
 <script src = "pa2script.js" defer></script>
@@ -10,22 +10,25 @@
 	<p id="clock"></p>
 	<p id="date"></p>
 
-	<h2>JavaScript in Body</h2>
-
-	<p id="demo">A Paragraph.</p>
-
 	<p>This is Andrew Doyle's webpage. <br>
 	It was completed at XX:XX on XX/XX/XXXX.
 	</p>
 
+	<form id="emailAddress">
+		<div>
+			<label>Email address: (hit tab to focus the window without Hello Kitty)</label>
+			<div>
+				<input name="email" type="email"/>
+				<input name="submit" type="submit" text="submit"/>
+			</div>
+		</div>
+	</form>
+	
 	<script>
 		var d = new Date();
 		document.getElementById("date").innerHTML = (d.getMonth()+1) + '/' + (d.getDay()+1) + '/' + (d.getFullYear());
 	</script>
-
 	
-	<button type="button" onclick="myFunction()">Try it</button>
-
 </div>
 </body>
 </html> 
@@ -45,12 +48,13 @@ TASK NOTES
 -Use 10n to set the range, as “n” increases, font sizes increases.
 
 2) An email address validator. 
--The validator has a text field allowing the user to enter an email address. 
--It validates the address when the user clicks on a “Validate” button and alerts the user by draw a line through the wrong characters. 
+-The validator has a text field allowing the user to enter an email address. DONE
+-It validates the address when the user clicks on a “Validate” button... DONE
+-and alerts the user by drawing a line through the wrong characters. DONE? My version tells you which email rules you are breaking.
 -The validator has another text field allowing the user to enter an email address. It validates the address as the user types and alerts the user whenever an invalid character is entered.
 
 3) An interactive animation. 
 -Add a small image (your thumbnail photo would be perfect) at the top-center of your page. DONE
 -When the user clicks on any part of your page, the image will be moved to the new cursor location and centered there. DONE
--The “move” has to be animated, i.e., the image moves “smoothly” to the new location, it does not just jumps there. FIXME - doesn't work for the first click
+-The “move” has to be animated, i.e., the image moves “smoothly” to the new location, it does not just jumps there. DONE
 -->
