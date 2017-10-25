@@ -15,6 +15,7 @@ function checkTime(i) {
     return i;
 }
 
+
 //The snippet below is inspired by code from https://codepen.io/rm89/pen/aNOmzQ?editors=1000
 var container = document.querySelector("#contentContainer");
 var kitty = document.querySelector("#helloKitty");
@@ -26,3 +27,25 @@ container.addEventListener("click", function(event) {
 	kitty.style.top = yPosition + "px";
 	}
 );
+
+
+var f = [];
+
+function calc(){
+	if (document.getElementById("factorialInput").value<0){
+		alert("You entered a negative number! This only works with positive numbers!")
+		return;
+	}
+	var x = factorial(document.getElementById("factorialInput").value);
+	document.getElementById("factorialOutput").value = x;
+	document.getElementById("factorialOutput").style.fontSize = 10*x+"px";
+	document.getElementById("factorialOutput").style.color = '#'+Math.random().toString(16).substr(-6);
+}
+
+function factorial (n) {
+  if (n == 0 || n == 1)
+    return 1;
+  if (f[n] > 0)
+    return f[n];
+  return f[n] = factorial(n-1) * n;
+} 

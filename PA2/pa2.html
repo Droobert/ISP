@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="pa2style.css">
-<script src = "pa2script.js" defer></script>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="pa2style.css">
+	<script src = "pa2script.js" defer></script>
 </head>
+
 <body onload="startTime()">
-<div id="contentContainer">
+<div class="container" id="contentContainer">
 	<div id="helloKitty"></div>
 	<p id="clock"></p>
 	<p id="date"></p>
 
 	<p>This is Andrew Doyle's webpage. <br>
-	It was completed at XX:XX on XX/XX/XXXX.
+	It was completed at 16:53 on 10/25/2017
 	</p>
 
+	<p>(Hint: hit tab to focus on the inputs without getting harassed by Hello Kitty)</p>
+	
 	<form id="emailAddress">
 		<div>
-			<label>Email address: (hit tab to focus the window without Hello Kitty)</label>
+			<label>Email address validator:</label>
 			<div>
 				<input name="email" type="email"/>
-				<input name="submit" type="submit" text="submit"/>
+				<input name="submit" type="submit"/>
+				<br>
 			</div>
 		</div>
 	</form>
 	
+	<div>
+		<h3>Factorial Calculator</h3>
+		Enter a positive number:
+		<form id="calculator">
+			Input: <input id="factorialInput" type="text" value="8"/>
+			<input id="factorialButton" type="button" onclick="calc()" value="Calculate" ></input>
+			<br>Output: <input id="factorialOutput"	type="text" value="0"/>
+		</form>
+	</div>
+	
 	<script>
 		var d = new Date();
-		document.getElementById("date").innerHTML = (d.getMonth()+1) + '/' + (d.getDay()+1) + '/' + (d.getFullYear());
+		document.getElementById("date").innerHTML = (d.getMonth()+1) + '/' + (d.getDate()) + '/' + (d.getFullYear());
 	</script>
 	
 </div>
@@ -41,11 +56,11 @@ TASK NOTES
 (C) Your page should demonstrate the following features:
 
 1) A factorial calculator. 
--The calculator will “prompt” the user for a positive number and “alert” the user if the number entered by the user is negative. 
--The default input value for the prompt is 8. 
--The computation should be done with a function. 
--The result should be displayed with different size and color of font based on its value.
--Use 10n to set the range, as “n” increases, font sizes increases.
+-The calculator will “prompt” the user for a positive number and “alert” the user if the number entered by the user is negative. DONE
+-The default input value for the prompt is 8. DONE
+-The computation should be done with a function. DONE
+-The result should be displayed with different size and color of font based on its value. DONE? It changes to random colors instead of colors based on the value.
+-Use 10n to set the range, as “n” increases, font sizes increases. DONE
 
 2) An email address validator. 
 -The validator has a text field allowing the user to enter an email address. DONE
