@@ -9,7 +9,7 @@
 <form id="calculator" method ="post">
 	Output: <input type="text" name="out" id="output" 
                        value="<?php 
-            if(($_POST['in']) != 0)
+            if(isset($_POST['operator']) && ($_POST['in']) != 0)
                 switch ($_POST['operator']):
                     case '+':
                         echo $_POST['out'] + $_POST['in'];
