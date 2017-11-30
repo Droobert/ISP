@@ -1,7 +1,213 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-</body>
+	<head>
+			<link rel="stylesheet" type="text/css" href="pa4.css">
+			<script src = "pa4.js" defer></script>
+	</head>
+    <body>
+
+<h1> Hello Kitty Fansite Creator </h1>
+
+<table border="1" style="width:100%">
+    <tr>
+        <th>Item</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>Open</td>
+        <td>Open the design window</td>
+        <td><button onclick="openWin()">Open</button></td>
+    </tr>
+	<tr>
+        <td>Header</td>
+        <td>Add a header with the text "I love Hello Kitty!"</td>
+        <td><button onclick="addHeader()">Add</button></td>
+    </tr>
+    <tr>
+        <td>Google Play</td>
+        <td>Add a Google Play button for Hello Kitty Nail Salon</td>
+        <td><button onclick="addGooglePlay()">Add</button></td>
+    </tr>
+	<tr>
+        <td>Youtube Player</td>
+        <td>Embed a YouTube video for Hello Kitty MEGA Cosmetics Set abd Surprises</td>
+        <td><button onclick="addYouTube()">Add</button></td>
+    </tr>
+	<tr>
+        <td>Image</td>
+        <td>Embed an image of Hello Kitty</td>
+        <td><button onclick="addImage()">Add</button></td>
+    </tr>
+	<tr>
+        <td>Anita's Notebook</td>
+        <td>Add a button to open Anita's Notebook page about Hello Kitty</td>
+        <td><button onclick="addAnitasNotebook()">Add</button></td>
+    </tr>
+	<tr>
+		<td>Background-Color</td>
+		<td>Click the dropdown to select a background-color</td>
+		<td><div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+			<div id="myDropdown" class="dropdown-content">
+				<a onclick="backgroundPink()">Pink</a>
+				<a onclick="backgroundSalmon()">Salmon</a>
+				<a onclick="backgroundPlum()">Plum</a>
+			</div>
+		</div>
+    </tr>
+    <tr>
+        <td>Close</td>
+        <td>Close the design window</td>
+        <td><button onclick="closeWindow()">Close</button></td>
+	</tr>
+</table>
+
+
+        <button onclick='window.open("http://www.w3schools.com/jsref/obj_window.asp")'>References</button>
+        <button onclick='window.open("http://www.w3schools.com/jsref/met_win_open.asp")'>Examples</button>
+        
+        <script>
+        var page = "<p>ISP PA4</p>";
+        var myWindow = null;
+        
+        function openWin() {
+	    if(myWindow != null) myWindow.close();
+            myWindow = window.open("", "ISP PA4", "width=1400,height=900");
+            myWindow.document.write(page);
+            }
+        
+        function addGooglePlay() {
+            page += "<a href='https://play.google.com/store/apps/details?id=com.budgestudios.HelloKittyNailSalon&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>"
+        }
+		
+		function addYouTube() {
+            page += "<iframe width='560' height='315' src='https://www.youtube.com/embed/30PXEtSX14U?rel=0' frameborder='0' allowfullscreen></iframe>";
+        }
+		
+		function addImage() {
+			page += "<img src= 'http://static.tvtropes.org/pmwiki/pub/images/Hello_Kitty_Pink_2981.jpg'>";
+		}
+		
+		function addHeader() {
+			page += "<h2>I love Hello Kitty!</h2>";
+		}
+		
+		function backgroundPink(){
+			page += "<style>body{ background-color: pink}</style>";
+		}
+		
+		function backgroundSalmon(){
+			page += "<style>body{ background-color: salmon}</style>";
+		}
+		
+		function backgroundPlum(){
+			page += "<style>body{ background-color: plum}</style>";
+		}
+		
+        function addExamples() {
+            page += "<button onclick='window.open(" + "\"" + "http://www.w3schools.com/jsref/met_win_open.asp" + "\"" + ")'>Examples</button>";
+        }
+		
+		function addAnitasNotebook() {
+			page += "<button onclick='window.open(" + "\"" + "http://anitasnotebook.com/stories/all-about-hello-kitty-the-story-of-her-life-family-friends-and-pets" + "\"" + ")'>Anita's Notebook</button>";
+		}
+		
+        function closeWindow() {
+            myWindow.close();
+        }
+ 
+        function reference() {
+            window.open("http://www.w3schools.com/jsref/obj_window.asp");
+        }
+        
+        function examples() {
+            window.open("http://www.w3schools.com/jsref/met_win_open.asp");
+        }
+
+        </script>
+ 
+ <h2> Features: <br> 20/20</h2>
+
+        <table border="1" style="width:100%">
+            <tr>
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>JavaScript</th>
+                <th>XML</th>
+                <th>Others</th>
+            </tr>
+            <tr>
+                <th>Table</th>
+                <th>Background-Color</th>
+                <th>Displaying Window</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+            <tr>
+                <th>Buttons</th>
+                <th>Text Alignment</th>
+                <th>Populating Display Window</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+			<tr>
+                <th>iFrame</th>
+                <th>Hover Effect</th>
+                <th>Displaying Dropdown Menu</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+			<tr>
+                <th>Images</th>
+                <th>Cursor</th>
+                <th>Closing Window</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+			<tr>
+                <th>Hyperlinks</th>
+                <th>Fonts</th>
+                <th>Opening Hyperlinks</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+			<tr>
+                <th>Headers</th>
+                <th>Width</th>
+                <th>Modifying CSS of Display Window</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+			<tr>
+                <th>Line Breaks</th>
+                <th>Height</th>
+                <th>None</th>
+                <th>None</th>
+                <th>None</th>
+            </tr>
+        </table>
+        
+        
+    </body>
 </html>
+
+<!--- 
+TASK NOTES:
+	Allow users to create their own web pages. Theme idea: Fansite for W3Schools? Hello Kitty Fansite? Hello Kitty Fansite.
+	
+	It should provide at least 20 elements in HTML, CSS, JS, and XML.
+		Element ideas:
+			Button to add a Picture to the web page: DONE
+			Button to add a youtube player to the web page: DONE
+			Dropdown for background colors: DONE
+			Add Google Play button: DONE
+			Add a small banner to the foreground "#1 Best Website!"
+			Add the header bar with words (that would normally be links) to the top of the screen
+			Dropdown for background images
+			Button to add a clock
+	
+	List the elements you used in a table at the bottom of your generator: DONE
+	
+	
+--->
